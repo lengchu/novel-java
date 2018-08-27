@@ -82,8 +82,8 @@ public class ComX23usClient implements NovelClient {
 				.map(ele -> {
 					try {
 						log.info("getting: " + ele.getTitle());
-//						String chapterContent = getChapterContent(ele.getUrl());
-//						ele.setContent(chapterContent);
+						String chapterContent = getChapterContent(ele.getUrl());
+						ele.setContent(chapterContent);
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
