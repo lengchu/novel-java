@@ -18,7 +18,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-import lenchu.novel.client.ComShuwulouClient;
+import lenchu.novel.client.ComSbkk88Client;
 import lenchu.novel.core.Novel;
 import lenchu.novel.core.NovelClient;
 import lenchu.novel.dto.Chapter;
@@ -35,8 +35,9 @@ public class Application {
 		log.info("start...");
 //		String novelUrl = "https://www.x23us.com/html/68/68045/";
 //		String novelUrl = "http://www.readers365.com/luxun/luxun01/";//http://www.readers365.com/jinyong/11/
-		String novelUrl = "http://www.shuwulou.com/shu/3875.html";
-		NovelClient client = new ComShuwulouClient();
+//		String novelUrl = "http://www.shuwulou.com/shu/3875.html";
+		String novelUrl = "https://www.sbkk88.com/html/sudongpochuan/";
+		NovelClient client = new ComSbkk88Client();
 		Novel novel = client.getNovel(novelUrl);
 		FileUtils.writeStringToFile(new File("novels/novel.txt"), novel.getAsString(), "UTF-8");
 		FileUtils.writeStringToFile(new File("novels/novel.json"), novel.getAsJsonString(), "UTF-8");
